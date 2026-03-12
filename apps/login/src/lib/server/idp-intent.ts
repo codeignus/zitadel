@@ -478,8 +478,25 @@ async function handleAutoCreation(ctx: IDPHandlerContext): Promise<IDPHandlerRes
       org: { case: "orgId", value: orgToRegisterOn },
     });
 
+    let givenName = addHumanUser.profile?.givenName || "";
+    let familyName = addHumanUser.profile?.familyName || "";
+    
+    if (!givenName || !familyName) {
+      const nameParts = (addHumanUser.profile?.displayName || addHumanUser.username || "").trim().split(/\s+/).filter(Boolean);
+      if (!givenName) givenName = nameParts[0] || addHumanUser.email?.email?.split("@")[0] || ".";
+      if (!familyName) familyName = nameParts.slice(1).join(" ") || ".";
+    }
+    
+    const patchedProfile = {
+      ...addHumanUser.profile,
+      $typeName: "zitadel.user.v2.SetHumanProfile" as const,
+      givenName,
+      familyName,
+    };
+
     const addHumanUserWithOrganization = create(AddHumanUserRequestSchema, {
       ...addHumanUser,
+      profile: patchedProfile, // overwrites with our guaranteed non-empty givenName/familyName
       organization: organizationSchema,
     });
 
