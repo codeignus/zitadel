@@ -492,6 +492,8 @@ async function handleAutoCreation(ctx: IDPHandlerContext): Promise<IDPHandlerRes
       $typeName: "zitadel.user.v2.SetHumanProfile" as const,
       givenName,
       familyName,
+      displayName: givenName,  // set display name to first name
+      nickName: "",            // clear nickname
     };
 
     const addHumanUserWithOrganization = create(AddHumanUserRequestSchema, {
