@@ -496,6 +496,7 @@ async function handleAutoCreation(ctx: IDPHandlerContext): Promise<IDPHandlerRes
 
     const addHumanUserWithOrganization = create(AddHumanUserRequestSchema, {
       ...addHumanUser,
+      username: addHumanUser.email?.email, // force email as login name
       profile: patchedProfile, // overwrites with our guaranteed non-empty givenName/familyName
       organization: organizationSchema,
     });
