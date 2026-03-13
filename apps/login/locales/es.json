@@ -166,7 +166,8 @@
     "signInWithGitlab": "Iniciar sesión con GitLab",
     "loginError": {
       "title": "Error de inicio de sesión",
-      "description": "Ocurrió un error al intentar iniciar sesión."
+      "description": "Ocurrió un error al intentar iniciar sesión.",
+      "emailAlreadyRegistered": "Ya existe una cuenta con este correo electrónico. Por favor, inicie sesión utilizando el método con el que se registró originalmente."
     },
     "linkingError": {
       "title": "Error al vincular la cuenta",

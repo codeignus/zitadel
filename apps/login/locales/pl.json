@@ -166,7 +166,8 @@
     "signInWithGitlab": "Zaloguj się przez GitLab",
     "loginError": {
       "title": "Logowanie nieudane",
-      "description": "Wystąpił błąd podczas próby logowania."
+      "description": "Wystąpił błąd podczas próby logowania.",
+      "emailAlreadyRegistered": "Konto z tym adresem e-mail już istnieje. Zaloguj się, używając metody, którą pierwotnie się zarejestrowałeś."
     },
     "linkingError": {
       "title": "Powiązanie konta nie powiodło się",

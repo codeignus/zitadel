@@ -159,7 +159,8 @@
     "signInWithGitlab": "GitLabでサインイン",
     "loginError": {
       "title": "ログイン失敗",
-      "description": "ログインの際にエラーが発生しました。"
+      "description": "ログインの際にエラーが発生しました。",
+      "emailAlreadyRegistered": "このメールアドレスのアカウントは既に存在します。当初登録した方法でサインインしてください。"
     },
     "linkingError": {
       "title": "アカウント連携失敗",

@@ -166,7 +166,8 @@
     "signInWithGitlab": "用 GitLab 登录",
     "loginError": {
       "title": "登录失败",
-      "description": "登录时发生错误。"
+      "description": "登录时发生错误。",
+      "emailAlreadyRegistered": "此邮箱的账户已存在。请使用您最初注册的方法登录。"
     },
     "linkingError": {
       "title": "账户链接失败",

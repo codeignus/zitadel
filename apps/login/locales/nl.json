@@ -164,7 +164,8 @@
     "signInWithGitlab": "Aanmelden met GitLab",
     "loginError": {
       "title": "Inloggen mislukt",
-      "description": "Er is een fout opgetreden tijdens het inloggen."
+      "description": "Er is een fout opgetreden tijdens het inloggen.",
+      "emailAlreadyRegistered": "Er bestaat al een account met dit e-mailadres. Log in met de methode waarmee u zich oorspronkelijk heeft geregistreerd."
     },
     "linkingError": {
       "title": "Koppelen van account mislukt",

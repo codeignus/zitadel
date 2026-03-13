@@ -166,7 +166,8 @@
     "signInWithGitlab": "GitLab ile Giriş",
     "loginError": {
       "title": "Giriş başarısız",
-      "description": "Giriş yapılmaya çalışılırken bir hata oluştu."
+      "description": "Giriş yapılmaya çalışılırken bir hata oluştu.",
+      "emailAlreadyRegistered": "Bu e-posta adresiyle bir hesap zaten mevcut. Lütfen ilk kayıt olduğunuz yöntemi kullanarak giriş yapın."
     },
     "linkingError": {
       "title": "Hesap bağlama başarısız",

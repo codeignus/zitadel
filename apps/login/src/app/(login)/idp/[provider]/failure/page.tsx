@@ -15,7 +15,7 @@ export default async function Page(props: {
 }) {
   const searchParams = await props.searchParams;
 
-  const { organization, userId } = searchParams;
+  const { organization, userId, error } = searchParams;
 
   const _headers = await headers();
   const { serviceConfig } = getServiceConfig(_headers);
@@ -55,6 +55,8 @@ export default async function Page(props: {
     }
   }
 
+  const isEmailAlreadyRegistered = error === "email_already_registered";
+
   return (
     <DynamicTheme branding={branding}>
       <div className="flex flex-col space-y-4">
@@ -65,7 +67,10 @@ export default async function Page(props: {
 
       <div className="w-full">
         <Alert type={AlertType.ALERT}>
-          <Translated i18nKey="loginError.description" namespace="idp" />
+          <Translated
+            i18nKey={isEmailAlreadyRegistered ? "loginError.emailAlreadyRegistered" : "loginError.description"}
+            namespace="idp"
+          />
         </Alert>
 
         {userId && authMethods.length && (

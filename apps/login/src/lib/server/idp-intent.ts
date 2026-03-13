@@ -536,8 +536,13 @@ async function handleAutoCreation(ctx: IDPHandlerContext): Promise<IDPHandlerRes
       return { error: t("errors.sessionCreationFailed") };
     } catch (error: unknown) {
       logger.error("Error auto-creating user", { error });
+
+      const isAlreadyExists =
+        error instanceof ConnectError && error.code === Code.AlreadyExists;
+
+      const errorCode = isAlreadyExists ? "email_already_registered" : "user_creation_failed";
       const params = buildRedirectParams();
-      return { redirect: `/idp/${provider}/failure?${params}&error=user_creation_failed` };
+      return { redirect: `/idp/${provider}/failure?${params}&error=${errorCode}` };
     }
   }
 

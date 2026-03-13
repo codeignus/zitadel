@@ -166,7 +166,8 @@
     "signInWithGitlab": "Accedi con GitLab",
     "loginError": {
       "title": "Accesso fallito",
-      "description": "Si è verificato un errore durante il tentativo di accesso."
+      "description": "Si è verificato un errore durante il tentativo di accesso.",
+      "emailAlreadyRegistered": "Esiste già un account con questa email. Accedi utilizzando il metodo con cui ti sei registrato originariamente."
     },
     "linkingError": {
       "title": "Collegamento account fallito",

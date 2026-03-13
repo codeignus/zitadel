@@ -166,7 +166,8 @@
     "signInWithGitlab": "Mit GitLab anmelden",
     "loginError": {
       "title": "Anmeldung fehlgeschlagen",
-      "description": "Beim Anmelden ist ein Fehler aufgetreten."
+      "description": "Beim Anmelden ist ein Fehler aufgetreten.",
+      "emailAlreadyRegistered": "Ein Konto mit dieser E-Mail-Adresse existiert bereits. Bitte melden Sie sich mit der Methode an, mit der Sie sich ursprünglich registriert haben."
     },
     "linkingError": {
       "title": "Konto-Verknüpfung fehlgeschlagen",

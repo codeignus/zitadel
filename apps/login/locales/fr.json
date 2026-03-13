@@ -176,7 +176,8 @@
     },
     "loginError": {
       "title": "Échec de la connexion",
-      "description": "Une erreur est survenue lors de la tentative de connexion."
+      "description": "Une erreur est survenue lors de la tentative de connexion.",
+      "emailAlreadyRegistered": "Un compte avec cette adresse e-mail existe déjà. Veuillez vous connecter en utilisant la méthode avec laquelle vous vous êtes initialement inscrit."
     },
     "linkingError": {
       "title": "Échec de la liaison du compte",
